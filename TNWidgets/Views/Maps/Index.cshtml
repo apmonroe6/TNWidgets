@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <script charset="UTF-8" type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0">
+        </script>
+        <script type="text/javascript">
+            function GetMap() {
+                var map = new Microsoft.Maps.Map(document.getElementById("mapDiv"), { credentials: "Agy_GfNYoPZ4oOkzciOY_ato_zRKUw8SqlpAA_60LK1F1QXseTA8MhX3RW-kTteL" });
+                var atlLoc = new Microsoft.Maps.Location(33.7489, -84.3881);
+                var atlPin = new Microsoft.Maps.Pushpin(atlLoc);
+                map.entities.push(atlPin);
+
+                var chiLoc = new Microsoft.Maps.Location(41.8500, -87.6500);
+                var chiPin = new Microsoft.Maps.Pushpin(chiLoc);
+                map.entities.push(chiPin);
+            }
+        </script>
+    </head>
+
+
+<body onload="GetMap();">
+    <div id='mapDiv' style="position:absolute; width:400px; height:400px;"></div>
+</body>
+
+</html>
